@@ -10,7 +10,7 @@ services:
       - "80:80"
     depends_on:
       - app
-    container_name: ${CONTAINER_PREFIX}_nginx
+    container_name: ${CONTAINER_PREFIX}_web
   app:
     image: $REGISTRY/dev/app:$CI_COMMIT_SHA
     environment:
