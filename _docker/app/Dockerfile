@@ -58,6 +58,7 @@ RUN composer dump-autoload  --no-scripts --optimize && \
     chmod -R 775 /var/www/storage && \
     chmod -R 775 /var/www/bootstrap/cache
 
+RUN cp .env.example .env
 #RUN php artisan migrate
 
 WORKDIR /var/www
