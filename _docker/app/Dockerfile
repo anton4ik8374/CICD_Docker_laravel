@@ -29,7 +29,6 @@ COPY storage        /var/www/storage
 COPY artisan        /var/www/artisan
 COPY package.json   /var/www/package.json
 COPY vite.config.js /var/www/vite.config.js
-COPY .env.example /var/www/.env
 
 COPY composer.*  ./
 
