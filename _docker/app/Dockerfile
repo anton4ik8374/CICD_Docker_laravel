@@ -29,6 +29,7 @@ COPY storage        /var/www/storage
 COPY artisan        /var/www/artisan
 COPY package.json   /var/www/package.json
 COPY vite.config.js /var/www/vite.config.js
+COPY .env.example /var/www/.env
 
 COPY composer.*  ./
 
@@ -58,8 +59,6 @@ RUN composer dump-autoload  --no-scripts --optimize && \
     chmod -R 775 /var/www/storage && \
     chmod -R 775 /var/www/bootstrap/cache
 
-RUN cp .env.example .env
-#RUN php artisan migrate
 
 WORKDIR /var/www
 
