@@ -7,10 +7,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use App\Traits\HasRolesAndPermissions;
+use App\Models\Role;
+use App\Models\Permission;
 
 class User extends Authenticatable
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    use HasApiTokens, HasFactory, Notifiable, HasRolesAndPermissions;
 
     /**
      * The attributes that are mass assignable.
@@ -20,6 +23,10 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'phone',
+        'last_name',
+        'middle_name',
+        'actual',
         'password',
     ];
 
@@ -41,4 +48,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    protected function addStartRoles()
+    {
+        $role = Role::where('slug', 'U')->first();
+        $premissi = Permission::where('slug','U')->first();
+        $this->roles()->attach($role);
+        $this->permissions()->attach($premissi);
+    }
 }
