@@ -1,5 +1,4 @@
 import * as React from 'react';
-
 import HeaderUser from "./Layouts/Header"
 import FooterUser from "./Layouts/Footer";
 import ProjectSkeleton from "./Skeletons/ProjectSkeleton";
@@ -10,6 +9,7 @@ import User from "./Stores/UserStore";
 import RoutersApi from "@/Stores/RoutersStore";
 import {observer} from "mobx-react";
 import {CssBaseline} from "@mui/material";
+import StartStyle from "@/Styles/StartStyle";
 
 const Start = observer(() => {
 
@@ -17,10 +17,10 @@ const Start = observer(() => {
         <>
             {!(User.startLoad || RoutersApi.loaded) ?
                 (<ProjectSkeleton/>) :
-                (<Box sx={{ flexGrow: 1 }}>
+                (<Box sx={StartStyle.start}>
                     <CssBaseline/>
                     <HeaderUser/>
-                    <Box component="main">
+                    <Box component="main" sx={StartStyle.main}>
                         <ConfigRouter/>
                     </Box>
                     <FooterUser/>

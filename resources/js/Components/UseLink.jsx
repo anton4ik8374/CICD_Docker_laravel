@@ -8,8 +8,8 @@ const UseLink = observer(({to, name, color = blue}) => {
     const StyledLink = styled(NavLink)`
       color: ${color[900]};
       text-decoration: none;
-      margin-right: 1rem;
       font-size: 1.10rem;
+      padding: 16px;
 
       &.active {
         color: ${color[300]};

@@ -16,7 +16,7 @@ const UserInfo = observer(({linkLogout = false}) => {
         User.logout();
     }
     return (<>
-        <Box>
+        <Box sx={HeaderStyle.UserBox}>
             <Box sx={HeaderStyle.login}>
             {user?.id ?
                 (<UserMenu/>)

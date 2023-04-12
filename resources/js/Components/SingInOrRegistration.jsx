@@ -12,7 +12,7 @@ const SingInOrRegistration = observer(({linkLogout = false}) => {
 
     return (<>
         <UseLink to={routesMap.signIn} name={'Войти'}/>
-        <UseLink to={routesMap.registrations} name={'Регистрация'}/></>);
+        {/*<UseLink to={routesMap.registrations} name={'Регистрация'}/>*/}</>);
 
 })
 

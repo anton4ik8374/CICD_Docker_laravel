@@ -111,7 +111,7 @@ const SignIn = observer(() => {
                     >
                         Войти
                     </Button>
-                    <Grid container>
+                    {/*<Grid container>
                         <Grid item xs>
                             <Link to={routesMap.registrations} variant="body2">
                                 Забыли пароль?
@@ -122,10 +122,9 @@ const SignIn = observer(() => {
                                 Регистрация
                             </Link>
                         </Grid>
-                    </Grid>
+                    </Grid>*/}
                 </Box>
             </Box>
-            <Copyright sx={{mt: 8, mb: 4}}/>
         </Container>
     );
 });

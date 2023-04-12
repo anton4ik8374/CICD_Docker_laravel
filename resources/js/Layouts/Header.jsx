@@ -8,6 +8,7 @@ import MenuSkeleton from "@/Skeletons/MenuSkeleton";
 import MenuItem from "@/Components/MenuItems"
 import UserInfo from "@/Components/UserInfo";
 import Menus from "@/Stores/MenuStore";
+import HeaderStyle from "@/Styles/HeaderStyle";
 
 const HeaderUser = observer(() => {
 
@@ -25,21 +26,22 @@ const HeaderUser = observer(() => {
     return (<>
         {elementMenus ?
             (<>
-                <AppBar position="static">
+                <AppBar sx={HeaderStyle.header}>
 
                     <Toolbar>
-                        <Box>
+                        <Box sx={HeaderStyle.logoBox}>
                             <Link to={routesMap.home}>
-                                <img width={150} src={`/images/logo/new.jpg`}/>
+                                <img style={HeaderStyle.logo} src={`/images/logo/new.jpg`} alt={"Web-door"}/>
                             </Link>
                         </Box>
+
 
                         <Container>
                             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                                 {elementMenus}
                             </Box>
                         </Container>
-                        <Box>
+                        <Box sx={HeaderStyle.UserBox}>
                             <UserInfo/>
                         </Box>
                     </Toolbar>

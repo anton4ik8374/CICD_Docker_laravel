@@ -2,6 +2,7 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
+import '@/../css/font-icons.css';
 
 import theme from "./Themes/Blue"
 import React from "react";

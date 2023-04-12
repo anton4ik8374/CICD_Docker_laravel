@@ -7,11 +7,7 @@ const theme = createTheme({
         //mode: 'dark',
         primary: {
             main: blue[500],
-            a:{
-                hover:{
-                    color: 'red'
-                }
-            }
+
         },
         secondary: {
             main: blue[300]
@@ -19,6 +15,6 @@ const theme = createTheme({
     },
     components: {
 
-    }
+    },
 });
 export default theme;

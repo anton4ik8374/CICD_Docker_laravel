@@ -1,7 +1,6 @@
 import Home from "@/Page/Home";
 import React from "react";
 import ProtectedRoute from "./ProtectedRoute"
-
 import User from "@/Stores/UserStore";
 import SignIn from "@/Page/SignIn";
 import Registrations from "@/Page/Registrations";
