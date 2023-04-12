@@ -43,7 +43,7 @@ const FooterUser = observer(() => {
                                     </Link>
                                     <Link
                                         href="mailto:anton4ik2251@yandex.ru">
-                                        support@web-door.net
+                                        anton4ik2251@yandex.ru
                                     </Link>
                                 </Box>
                             </Box>

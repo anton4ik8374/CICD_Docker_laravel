@@ -11,8 +11,8 @@ import UseLink from "@/Components/UseLink";
 const SingInOrRegistration = observer(({linkLogout = false}) => {
 
     return (<>
-        <UseLink to={routesMap.signIn} name={'Войти'}/>
-        {/*<UseLink to={routesMap.registrations} name={'Регистрация'}/>*/}</>);
+        <UseLink to={routesMap.signIn} name={'Войти в IT'}/>
+        {<UseLink to={routesMap.registrations} name={'Регистрация'}/>}</>);
 
 })
 
