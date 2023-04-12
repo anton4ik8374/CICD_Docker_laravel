@@ -5,6 +5,9 @@ use App\Http\Controllers\MainController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\RoutesController;
+use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Auth\LoginController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -25,8 +28,9 @@ Route::group(['prefix' => 'user'], function () {
 });
 Route::post('get-free-menu', [MenuController::class, 'getFreeMenu'])->name('getFreeMenu');
 Route::post('get-routers', [RoutesController::class, 'getRoutes'])->name('getRoutes');
+Route::post('login', [LoginController::class, 'login'])->name('login');
+Route::post('register', [RegisterController::class, 'register'])->name('register');
 
-Auth::routes();
 Route::group(['middleware' => ['throttle:120,1']], function () {
     Route::group(['middleware' => ['auth:sanctum']], function () {
         Route::group(['prefix' => 'user'], function () {
